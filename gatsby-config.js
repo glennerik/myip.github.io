@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `MyIP.info`,
+    description: `Shows you your public IP address. Your Internet Protocol adress`,
+    author: `@glenneriks`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
