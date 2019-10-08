@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `MyIP.info`,
-    description: `Shows you your public IP address. Your Internet Protocol adress`,
+    description: `Shows your public IP address. Your Internet Protocol address - the way the internet sees you`,
     author: `@glenneriks`,
   },
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/myip-icon-blue-256x256.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
