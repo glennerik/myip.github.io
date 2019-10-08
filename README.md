@@ -1,2 +1,2 @@
-# myip.github.io
+# myip.info
 MyIP.info
