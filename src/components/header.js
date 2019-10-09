@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Logo from "./image"
+import { Logo } from "./Images"
 
 // make a css navbar
 // https://bulma.io/documentation/components/navbar/
@@ -13,29 +13,27 @@ const Header = ({ siteTitle }) => (
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand">
-        <div
-          className="navbar-item"
-          style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}
-        >
+      <Link
+        to="/"
+        className="navbar-item"
+        className="navbar-brand"
+        title="MyIP.info"
+      >
+        <div className="image is-64x64">
           <Logo />
         </div>
+      </Link>
 
-        <Link to="/" className="navbar-item">
-          {siteTitle}
-        </Link>
-
-        <button
-          className="navbar-burger burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-        </button>
-      </div>
+      <button
+        className="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+      </button>
     </nav>
   </header>
 )
