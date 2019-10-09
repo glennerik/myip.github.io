@@ -8,7 +8,7 @@ import ShowIpv4 from "../components/ShowIPv4/"
 const IndexPage = () => (
   <Layout>
     <SEO title="What is my IP address?" />
-    <section className="hero is-medium is-light is-bold">
+    <section className="hero is-fullheight-with-navbar is-light is-bold">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title">Your IP address</h1>

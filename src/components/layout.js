@@ -14,7 +14,6 @@ import "./layout-bulma.scss"
 import "bulma-helpers/css/bulma-helpers.min.css"
 
 import Header from "./header"
-import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,10 +28,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <AddBodyClass className="has-navbar-fixed-top has-navbar-fixed-bottom" />
+      <AddBodyClass className="has-navbar-fixed-top" />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Footer />
     </>
   )
 }
