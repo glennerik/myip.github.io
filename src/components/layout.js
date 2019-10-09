@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import AddBodyClass from "react-body-classname"
 
 import Header from "./header"
 import "./layout-bulma.scss"
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <AddBodyClass className="has-navbar-fixed-top has-navbar-fixed-bottom" />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -37,7 +39,6 @@ const Layout = ({ children }) => {
         <main>{children}</main>
 
         <footer class="footer">
-          {/* Put share icons here */}
           <div class="content has-text-right">
             <a href="https://www.myip.info">MyIP.info</a> ©{" "}
             {new Date().getFullYear()}
