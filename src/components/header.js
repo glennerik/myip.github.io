@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand">
+      <div className="navbar-brand">
         <Link to="/" className="navbar-item2" title="MyIP.info">
           <div className="image is-64x64 has-margin-5">
             <Logo />
