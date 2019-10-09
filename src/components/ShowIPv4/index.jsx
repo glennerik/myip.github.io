@@ -3,6 +3,8 @@ import axios from "axios"
 import reducer, { defaultState } from "./reducer"
 import Swal from "sweetalert2"
 
+// ! TODO: Input Link ADDON to Position (see your position = with link to iplocation)
+
 const Toast = Swal.mixin({
   toast: true,
   position: "top-end",

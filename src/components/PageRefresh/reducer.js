@@ -1,5 +1,5 @@
 export const defaultState = {
-  refreshValue: 60,
+  refreshValue: 600,
 }
 
 export default (state, action) => {

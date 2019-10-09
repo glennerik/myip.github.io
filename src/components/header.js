@@ -53,7 +53,7 @@ const Header = ({ siteTitle }) => (
               <PageRefresh />
             </div>
           </div>
-          <div className="navbar-item">
+          <div className="navbar-item has-text-centered">
             <Link to="/">
               MyIP.info
               <br />© {new Date().getFullYear()}
