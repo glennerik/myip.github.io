@@ -6,11 +6,11 @@ const IndexPage = () => (
   <Layout>
     <SEO title="What is my IP address?" />
 
-    <section class="hero is-medium is-info is-bold">
+    <section class="hero is-medium is-light is-bold">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 className="title is-1">Your IP address is</h1>
-          <h2 class="subtitle is-2">1.2.3.4</h2>
+          <h1 className="title">Your IP address is</h1>
+          <span class="tag is-dark is-large">156.234.13.199</span>
         </div>
       </div>
     </section>
