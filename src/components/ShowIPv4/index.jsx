@@ -50,22 +50,35 @@ const IPv4 = ({ className }) => {
   }, [state.ipv4, dispatch])
 
   if (state.failedMessage) {
-    return <span className={`${className}`}>{state.failedMessage}</span>
+    return (
+      <>
+        <span className={`${className}`}>Undetected</span>
+        <p className="help">{state.failedMessage}</p>
+      </>
+    )
   }
 
   if (state.isLoading) {
-    return <span className={`${className} button is-loading`}>Loading...</span>
+    return (
+      <>
+        <span className={`${className} button is-loading`}>Loading...</span>
+        <p className="help">Loading...</p>
+      </>
+    )
   }
 
   return (
-    <input
-      id="copyIpv4"
-      value={state.ipv4}
-      readOnly
-      onClick={copyIpv4}
-      className={`${className} has-text-centered has-cursor-pointer is-borderless`}
-      title="Click to copy"
-    />
+    <>
+      <input
+        id="copyIpv4"
+        value={state.ipv4}
+        readOnly
+        onClick={copyIpv4}
+        className={`${className} has-text-centered has-cursor-pointer is-borderless`}
+        title="Click to copy"
+      />
+      <p className="help">click to copy</p>
+    </>
   )
 }
 
@@ -76,7 +89,6 @@ export default ({ className }) => {
       <div className="control has-text-centered">
         <IPv4 className={className} />
       </div>
-      <p className="help">(click to copy)</p>
     </div>
   )
 }
