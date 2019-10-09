@@ -2,9 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Logo } from "./Images"
-
-// make a css navbar
-// https://bulma.io/documentation/components/navbar/
+import PageRefresh from "./PageRefresh/"
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -52,9 +50,7 @@ const Header = ({ siteTitle }) => (
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-primary">
-                <strong>Sign up</strong>
-              </a>
+              <PageRefresh />
             </div>
           </div>
           <div className="navbar-item">
