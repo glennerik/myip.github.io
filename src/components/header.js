@@ -33,8 +33,12 @@ const Header = ({ siteTitle }) => (
 
       <div id="myIpTopNavbarOpen" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item">My IP</a>
-          <a className="navbar-item">My Browser</a>
+          <Link to="/" className="navbar-item">
+            My IP
+          </Link>
+          <Link to="/myBrowser" className="navbar-item">
+            My Browser
+          </Link>
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>
             <div className="navbar-dropdown">
