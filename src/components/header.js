@@ -13,27 +13,25 @@ const Header = ({ siteTitle }) => (
       role="navigation"
       aria-label="main navigation"
     >
-      <Link
-        to="/"
-        className="navbar-item"
-        className="navbar-brand"
-        title="MyIP.info"
-      >
-        <div className="image is-64x64">
-          <Logo />
-        </div>
-      </Link>
+      <div class="navbar-brand">
+        <Link to="/" className="navbar-item2" title="MyIP.info">
+          <div className="image is-64x64 has-margin-5">
+            <Logo />
+          </div>
+        </Link>
 
-      <button
-        className="navbar-burger burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
-      >
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-      </button>
+        <a // eslint-disable-line jsx-a11y/anchor-is-valid
+          role="button"
+          className="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
     </nav>
   </header>
 )
