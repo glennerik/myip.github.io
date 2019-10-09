@@ -35,7 +35,7 @@ const copyIpv4 = () => {
   }
 }
 
-export default ({ className }) => {
+const IPv4 = ({ className }) => {
   const [state, dispatch] = useReducer(reducer, defaultState)
 
   useEffect(() => {
@@ -58,16 +58,25 @@ export default ({ className }) => {
   }
 
   return (
-    <>
-      <input
-        id="copyIpv4"
-        value={state.ipv4}
-        readOnly
-        onClick={copyIpv4}
-        className={`${className} has-text-centered has-cursor-pointer is-borderless`}
-        title="Click to copy"
-      />
-      <div className="is-size-7">(click to copy)</div>
-    </>
+    <input
+      id="copyIpv4"
+      value={state.ipv4}
+      readOnly
+      onClick={copyIpv4}
+      className={`${className} has-text-centered has-cursor-pointer is-borderless`}
+      title="Click to copy"
+    />
+  )
+}
+
+export default ({ className }) => {
+  return (
+    <div className="field">
+      <label className="label">IPv4</label>
+      <div className="control has-text-centered">
+        <IPv4 className={className} />
+      </div>
+      <p className="help">(click to copy)</p>
+    </div>
   )
 }
