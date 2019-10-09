@@ -52,7 +52,11 @@ const IPv4 = ({ className }) => {
   if (state.failedMessage) {
     return (
       <>
-        <span className={`${className}`}>Undetected</span>
+        <input
+          value="Undetected"
+          readOnly
+          className={`${className} has-text-centered is-borderless`}
+        />
         <p className="help">{state.failedMessage}</p>
       </>
     )
