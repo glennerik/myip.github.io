@@ -65,8 +65,10 @@ const IPv6 = ({ className }) => {
   if (state.isLoading) {
     return (
       <>
-        <span className={`${className} button is-loading`}>Loading...</span>
-        <p className="help">Loading...</p>
+        <span className={`${className} button is-loading`}>
+          Detecting IPv6 address...
+        </span>
+        <p className="help">Detecting IPv6 address...</p>
       </>
     )
   }
