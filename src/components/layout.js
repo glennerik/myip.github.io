@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "./layout-bulma.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,14 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}</footer>
+
+        <footer class="footer">
+          {/* Put share icons here */}
+          <div class="content has-text-right">
+            <a href="https://www.myip.info">MyIP.info</a> ©{" "}
+            {new Date().getFullYear()}
+          </div>
+        </footer>
       </div>
     </>
   )
