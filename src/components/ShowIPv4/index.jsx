@@ -67,8 +67,14 @@ const IPv4 = ({ className }) => {
   if (state.isLoading) {
     return (
       <>
-        <span className={`${className} button is-loading`}>Detecting IPv4 address...</span>
-        <p className="help">Detecting IPv4 address...</p>
+        <span className={`${className} button is-loading`}>
+          Detecting IPv4 address...
+        </span>
+        <p className="help">
+          Detecting IPv4 address
+          <noscript> (requires JavaScript)</noscript>
+          &hellip;
+        </p>
       </>
     )
   }

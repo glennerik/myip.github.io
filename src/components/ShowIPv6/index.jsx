@@ -68,7 +68,11 @@ const IPv6 = ({ className }) => {
         <span className={`${className} button is-loading`}>
           Detecting IPv6 address...
         </span>
-        <p className="help">Detecting IPv6 address...</p>
+        <p className="help">
+          Detecting IPv6 address
+          <noscript> (requires JavaScript)</noscript>
+          &hellip;
+        </p>
       </>
     )
   }
