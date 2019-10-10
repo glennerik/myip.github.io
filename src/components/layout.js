@@ -13,7 +13,7 @@ import AddBodyClass from "react-body-classname"
 import "./layout-bulma.scss"
 import "bulma-helpers/css/bulma-helpers.min.css"
 
-import Header from "./header"
+import Header from "./Header"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

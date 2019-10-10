@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Logo } from "./Images"
-import PageRefresh from "./PageRefresh/"
+import PageRefresh from "./PageRefresh"
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
               <PageRefresh />
             </div>
           </div>
-          <div className="navbar-item has-text-centered">
+          <div className="navbar-item">
             <Link to="/">
               MyIP.info
               <br />© {new Date().getFullYear()}
