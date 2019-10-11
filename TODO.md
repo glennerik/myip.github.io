@@ -1,4 +1,6 @@
-- Contact / About / Privacy pages
+- About page needs info about userAgent and hostname and the refresh button
+- Privacy page
+- Contact page
 - dev.myip.info preview netlify version
 - Show IP position (link to iplocation)
 - make nginx.myip.conf

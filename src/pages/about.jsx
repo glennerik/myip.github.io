@@ -24,7 +24,7 @@ export default () => {
 
             <div className="columns">
               <div className="column">
-                <h2 className="subtitle is-size-5">
+                <h2 className="subtitle is-size-3">
                   Show you technical information about your electronic device
                 </h2>
                 <p>
@@ -37,7 +37,7 @@ export default () => {
                 </p>
               </div>
               <div className="column">
-                <h2 className="subtitle is-size-5">
+                <h2 className="subtitle is-size-3">
                   We see what the rest of the internet sees
                 </h2>
                 <p>
@@ -52,7 +52,7 @@ export default () => {
 
             <div className="columns">
               <div className="column">
-                <h2 className="subtitle is-size-5">
+                <h2 className="subtitle is-size-3">
                   Learn &amp; know what information can be collected about you
                 </h2>
                 <p>
@@ -67,7 +67,7 @@ export default () => {
               </div>
 
               <div className="column">
-                <h2 className="subtitle is-size-5">Your IP Address</h2>
+                <h2 className="subtitle is-size-3">Your IP Address</h2>
                 <p>
                   <strong>
                     Also known as <i>Internet Protocol Address</i>
@@ -79,26 +79,52 @@ export default () => {
                   online. Usually it uniquely identifies you. IP addresses come
                   in two types. MyIP.info detects both!
                 </p>
-                <h3 className="subtitle size-7">IPv4</h3>
-                <p>
-                  IPv4 is on the form <u>number.number.number.number</u>. For
-                  example <i>8.8.8.8</i>
-                  <a href="https://en.wikipedia.org/wiki/IPv4" target="_blank">
-                    More on IPv4
-                  </a>
-                </p>
-                <h3 className="subtitle size-7">IPv6</h3>
-                <p>
-                  IPv6 is on the form{" "}
-                  <u>hexval:hexval:hexval:hexval::hexval:hexval</u>. For example{" "}
-                  <i>2604:a880:400:d0::4c66:8001</i>
-                  <a href="https://en.wikipedia.org/wiki/IPv6" target="_blank">
-                    More on IPv6
-                  </a>
-                </p>
+
+                <div className="has-margin-top-20" />
+
+                <div className="tile is-child notification is-info">
+                  <div className="content">
+                    <h3 className="title">IPv6</h3>
+                    <div className="content">
+                      IPv6 is on the form{" "}
+                      <i>hexval:hexval:hexval:hexval::hexval:hexval</i>. For
+                      example
+                      <i>2604:a880:400:d0::4c66:8001</i>
+                      <a
+                        href="https://en.wikipedia.org/wiki/IPv6"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="is-block"
+                      >
+                        Read more about IPv6 on wikipedia
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="tile is-parent">
+                  <div className="tile is-child notification is-info">
+                    <div className="content">
+                      <h3 className="title">IPv4</h3>
+                      <div className="content">
+                        IPv4 is on the form <i>number.number.number.number</i>.
+                        For example <i>8.8.8.8</i>
+                        <a
+                          href="https://en.wikipedia.org/wiki/IPv4"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="is-block"
+                        >
+                          Read more about IPv4 on wikipedia
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <p>
                   <a
                     href="https://en.wikipedia.org/wiki/IP_address"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     Learn more about IP Addresses in general on wikipedia
