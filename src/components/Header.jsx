@@ -46,8 +46,11 @@ const Header = ({ siteTitle }) => {
             <Link to="/" className="navbar-item">
               My IP
             </Link>
-            <Link to="/myBrowser" className="navbar-item">
+            <Link to="/useragent" className="navbar-item">
               My Browser
+            </Link>
+            <Link to="/hostname" className="navbar-item">
+              My Hostname
             </Link>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">More</a>
