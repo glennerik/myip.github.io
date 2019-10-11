@@ -1,4 +1,6 @@
+- Contact / About / Privacy pages
 - dev.myip.info preview netlify version
 - Show IP position (link to iplocation)
-- Contact / About / Privacy pages
+- make nginx.myip.conf
+  - add nginx as a netlify service?
 - iplocation.info branch => really a PWA

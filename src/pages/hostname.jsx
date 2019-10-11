@@ -19,7 +19,7 @@ export default () => {
         <section className="hero is-fullheight-with-navbar is-light is-bold">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title">Your Connection Details</h1>
+              <h1 className="title">Your Internet Connection Details</h1>
               <ShowHost />
             </div>
           </div>
