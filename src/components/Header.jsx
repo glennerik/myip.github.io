@@ -46,20 +46,28 @@ const Header = ({ siteTitle }) => {
             <Link to="/" className="navbar-item">
               My IP
             </Link>
-            <Link to="/useragent" className="navbar-item">
+            <Link to="/useragent.html" className="navbar-item">
               My Browser
             </Link>
-            <Link to="/hostname" className="navbar-item">
+            <Link to="/hostname.html" className="navbar-item">
               My Hostname
             </Link>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">More</a>
               <div className="navbar-dropdown">
-                <a className="navbar-item">About</a>
-                <a className="navbar-item">Privacy</a>
-                <a className="navbar-item">Contact</a>
+                <Link to="/about" className="navbar-item">
+                  About
+                </Link>
+                <Link to="/privacy" className="navbar-item">
+                  Privacy
+                </Link>
+                <Link to="/contat" className="navbar-item">
+                  Contact
+                </Link>
                 <hr className="navbar-divider" />
-                <a className="navbar-item">Report an issue</a>
+                <Link to="/" className="navbar-item">
+                  Home
+                </Link>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ShowHost from "../components/ShowHost/"
+import ShowHost from "../components/ShowHost"
 import ReactGA from "../components/ReactGA"
 
 export default () => {
