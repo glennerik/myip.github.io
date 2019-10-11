@@ -1,7 +1,4 @@
+- dev.myip.info preview netlify version
 - Show IP position (link to iplocation)
 - Contact / About / Privacy pages
-- google analytics ads
-- /ads.txt
-- /robots.txt
-- iplocation.info branch (really a PWA).
-- dev.myip.info preview netlify version
+- iplocation.info branch => really a PWA
