@@ -1,9 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ShowUA from "../components/ShowUA/"
+import ReactGA from "../components/ReactGA"
 
 export default () => {
+  useEffect(() => {
+    ReactGA.pageview("useragent")
+  }, [])
   return (
     <Layout>
       <SEO title="What is my User-Agent & Browser Details?" />

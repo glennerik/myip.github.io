@@ -1,9 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ShowHost from "../components/ShowHost/"
+import ReactGA from "../components/ReactGA"
 
 export default () => {
+  useEffect(() => {
+    ReactGA.pageview("hostname")
+  }, [])
   return (
     <Layout>
       <SEO title="What is my Hostname & ISP?" />

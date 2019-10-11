@@ -18,7 +18,6 @@ export default () => {
   return (
     <>
       <MetaHeader state={state} />
-
       <DropDown state={state} dispatch={dispatch} />
     </>
   )
@@ -76,7 +75,7 @@ const DropDown = props => {
 
 const DropDownItems = ({ state, dispatch }) => (
   <>
-    <div class="dropdown-item">
+    <div className="dropdown-item">
       <p>
         Set the page <b>refresh</b> interval
       </p>
@@ -84,6 +83,7 @@ const DropDownItems = ({ state, dispatch }) => (
     <hr className="dropdown-divider" />
     {refreshIntervals.map(({ payload, name }) => (
       <a
+        key={payload}
         href="#"
         className={`dropdown-item ${
           payload === state.refreshInterval ? "is-active" : ""

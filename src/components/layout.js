@@ -29,8 +29,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log("isProd", isProd)
-
   return (
     <>
       <Helmet>
