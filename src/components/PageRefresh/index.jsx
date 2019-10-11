@@ -1,27 +1,98 @@
-import React, { useReducer } from "react"
+import React from "react"
 import Helmet from "react-helmet"
+import { useLocalStorageReducer } from "react-storage-hooks"
 import reducer, { defaultState } from "./reducer"
+import refreshIntervals from "./refreshIntervals"
 
-// ! TODO: Egen button i Drop-down => STOP refreshing
-// Page refresh interval
 // Only spinning / not-spinning icon (with number inside or beside) instead of "Refresh" text (on dropdown)
-// color the spinner as danger if not-refreshing / black otherwise.
 // title should be "Refreshing 👍" "NOT Refreshing ⚠️"
-// use fontawesome.
+
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
 export default () => {
-  const [state, dispatch] = useReducer(reducer, defaultState)
+  const [state, dispatch] = useLocalStorageReducer(
+    "refreshInterval",
+    reducer,
+    defaultState
+  )
   return (
     <>
-      <MetaHeader value={state.refreshValue} />
-      <a className="button is-dark">Refresh</a>
+      <MetaHeader state={state} />
+
+      <DropDown state={state} dispatch={dispatch} />
     </>
   )
 }
 
-const MetaHeader = ({ value }) =>
-  !value ? null : (
+const MetaHeader = ({ state }) =>
+  state.refreshInterval === -1 || state.ddOpen ? null : (
     <Helmet>
-      <meta httpEquiv="refresh" content={parseInt(value, 10)} />
+      <meta
+        httpEquiv="refresh"
+        content={String(parseInt(state.refreshInterval, 10))}
+      />
     </Helmet>
   )
+
+const DropDown = props => {
+  return (
+    <div
+      className={`dropdown  is-right ${props.state.ddOpen ? "is-active" : ""}`}
+    >
+      <div className="dropdown-trigger">
+        <button
+          className={`button ${
+            !props.state.refreshInterval ? "is-warning" : "is-dark"
+          }`}
+          onClick={() => props.dispatch({ type: "TOGGLE_OPEN" })}
+          aria-haspopup="true"
+          aria-controls="refresh-dropdown-menu"
+        >
+          <span className="icon">
+            <i className="fas fa-sync-alt" />
+          </span>
+          <span className="icon is-small">
+            <i className="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div className="dropdown-menu" id="refresh-dropdown-menu" role="menu">
+        <div className="dropdown-content">
+          <DropDownItems {...props} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const DropDownItems = ({ state, dispatch }) => (
+  <>
+    <div class="dropdown-item">
+      <p>
+        Set the page <b>refresh</b> interval
+      </p>
+    </div>
+    <hr className="dropdown-divider" />
+    {refreshIntervals.map(({ payload, name }) => (
+      <a
+        href="#"
+        className={`dropdown-item ${
+          payload === state.refreshInterval ? "is-active" : ""
+        }`}
+        onClick={() => dispatch({ type: "SET_REFRESH_INTERVAL", payload })}
+      >
+        {name}
+      </a>
+    ))}
+    <hr className="dropdown-divider" />
+    <a
+      href=""
+      className={`dropdown-item ${
+        0 === state.refreshInterval ? "is-active" : ""
+      }`}
+      onClick={() => dispatch({ type: "SET_REFRESH_INTERVAL", payload: -1 })}
+    >
+      {state.refreshInterval === -1 ? "Not" : "Stop"} refreshing
+    </a>
+  </>
+)

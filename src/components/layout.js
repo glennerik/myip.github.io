@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import AddBodyClass from "react-body-classname"
+import Helmet from "react-helmet"
 
 import "./layout-bulma.scss"
 import "bulma-helpers/css/bulma-helpers.min.css"
@@ -28,6 +29,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <script
+          src="https://kit.fontawesome.com/60966f347e.js"
+          crossorigin="anonymous"
+        />
+      </Helmet>
       <AddBodyClass className="has-navbar-fixed-top" />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>

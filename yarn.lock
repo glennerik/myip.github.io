@@ -9822,6 +9822,11 @@ react-side-effect@^1.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
   integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
 
+react-storage-hooks@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-storage-hooks/-/react-storage-hooks-3.0.3.tgz#c1cbb79398434af0694e9c6f0c687cb87bbe85b4"
+  integrity sha512-kRUk+ZnRx4dIAkNwmwRhTHxMZlVpXAW5a3qmbqr17CH+/ZfhJ9ksxyYjCUufB/BCkKOXIOEka7sp3HvtB1A1Gw==
+
 react@^16.10.2:
   version "16.10.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"

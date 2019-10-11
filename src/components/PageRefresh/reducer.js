@@ -1,15 +1,20 @@
 export const defaultState = {
-  refreshValue: 600,
+  refreshInterval: 600,
+  ddOpen: false,
 }
 
 export default (state, action) => {
   switch (action.type) {
-    case "SET_REFRESH_VALUE": {
-      const refreshValue = action.payload
+    case "SET_REFRESH_INTERVAL": {
+      const refreshInterval = action.payload
       return {
         ...state,
-        refreshValue,
+        ddOpen: false,
+        refreshInterval,
       }
+    }
+    case "TOGGLE_OPEN": {
+      return { ...state, ddOpen: !state.ddOpen }
     }
     default:
       return state

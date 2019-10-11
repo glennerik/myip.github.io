@@ -4,6 +4,8 @@ import React, { useState } from "react"
 import { Logo } from "./Images"
 import PageRefresh from "./PageRefresh"
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 const Header = ({ siteTitle }) => {
   const [isActive, setActive] = useState(false)
   const toggleActive = () => setActive(!isActive)
@@ -15,10 +17,11 @@ const Header = ({ siteTitle }) => {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <Link to="/" title="MyIP.info">
-            <div className="image is-32x32 has-margin-10">
+          <Link to="/" title="MyIP.info" className="has-margin-10">
+            <span className="image is-64x64">
               <Logo />
-            </div>
+            </span>
+            MyIP.info
           </Link>
 
           <a // eslint-disable-line jsx-a11y/anchor-is-valid
@@ -65,10 +68,7 @@ const Header = ({ siteTitle }) => {
               </div>
             </div>
             <div className="navbar-item">
-              <Link to="/">
-                MyIP.info
-                <br />© {new Date().getFullYear()}
-              </Link>
+              <Link to="/">© {new Date().getFullYear()}</Link>
             </div>
           </div>
         </div>
