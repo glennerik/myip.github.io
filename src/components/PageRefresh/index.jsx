@@ -42,14 +42,23 @@ const DropDown = props => {
       <div className="dropdown-trigger">
         <button
           className={`button ${
-            !props.state.refreshInterval ? "is-warning" : "is-dark"
+            props.state.refreshInterval === -1 ? "is-warning" : "is-dark"
           }`}
           onClick={() => props.dispatch({ type: "TOGGLE_OPEN" })}
           aria-haspopup="true"
           aria-controls="refresh-dropdown-menu"
         >
           <span className="icon">
-            <i className="fas fa-sync-alt" />
+            <i
+              className={`fas fa-sync-alt ${
+                props.state.ddOpen ? "fa-spin" : ""
+              }`}
+            />
+          </span>
+          <span>
+            {refreshIntervals
+              .filter(i => i.payload === props.state.refreshInterval)
+              .map(i => i.shortName)}
           </span>
           <span className="icon is-small">
             <i className="fas fa-angle-down" aria-hidden="true"></i>
@@ -88,7 +97,7 @@ const DropDownItems = ({ state, dispatch }) => (
     <a
       href=""
       className={`dropdown-item ${
-        0 === state.refreshInterval ? "is-active" : ""
+        -1 === state.refreshInterval ? "is-active" : ""
       }`}
       onClick={() => dispatch({ type: "SET_REFRESH_INTERVAL", payload: -1 })}
     >
