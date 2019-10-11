@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ShowIpv4 from "../components/ShowIPv4/"
-import ShowIpv6 from "../components/ShowIPv6/"
+import ShowIP from "../components/ShowIP/"
 
 const IndexPage = () => (
   <Layout>
@@ -11,9 +10,7 @@ const IndexPage = () => (
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title">Your IP address</h1>
-          <ShowIpv4 className="tag is-dark is-large" />
-          <div className="has-margin-50" />
-          <ShowIpv6 className="tag is-dark is-large" />
+          <ShowIP />
         </div>
       </div>
     </section>
