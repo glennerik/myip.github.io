@@ -62,7 +62,7 @@ const Metric = props => {
     return (
       <>
         <code className={`${metricClassStyle} button is-loading`}>
-          Detecting {props.metricName}...
+          Detecting...
         </code>
         <p className="help">
           Detecting {props.metricName}
