@@ -18,11 +18,12 @@ export default () => {
         <SEO title="What this site is about" />
         <section className="section">
           <div className="container">
-            <h1 className="title is-size-1 has-text-centered">
+            <h1 className="title is-size-1 has-text-centered has-margin-bottom-50">
               What this site is about
             </h1>
 
             <div className="columns">
+              <div className="column" />
               <div className="column">
                 <h2 className="subtitle is-size-3">
                   Show you technical information about your electronic device
@@ -34,18 +35,6 @@ export default () => {
                   what type of information is revealed of your activites
                   on-line. It is also a good place to check how well you are
                   anonymized, when that is something you are trying to achieve.
-                </p>
-              </div>
-              <div className="column">
-                <h2 className="subtitle is-size-3">
-                  We see what the rest of the internet sees
-                </h2>
-                <p>
-                  One of the main reasons for accessing a website like MyIP.info
-                  is because our service is a remote system from you, just like
-                  many other services you use on-line. Therefor, most of what we
-                  are able to see, and reflect back to you, will be the same
-                  most other on-line services will see.
                 </p>
               </div>
             </div>
@@ -65,7 +54,26 @@ export default () => {
                   platform, operating system and browser type.
                 </p>
               </div>
+              <div className="column" />
+            </div>
 
+            <div className="columns">
+              <div className="column" />
+              <div className="column">
+                <h2 className="subtitle is-size-3">
+                  We see what the rest of the internet sees
+                </h2>
+                <p>
+                  One of the main reasons for accessing a website like MyIP.info
+                  is because our service is a remote system from you, just like
+                  many other services you use on-line. Therefor, most of what we
+                  are able to see, and reflect back to you, will be the same
+                  most other on-line services will see.
+                </p>
+              </div>
+            </div>
+
+            <div className="columns">
               <div className="column">
                 <h2 className="subtitle is-size-3">Your IP Address</h2>
                 <p>
@@ -80,48 +88,40 @@ export default () => {
                   in two types. MyIP.info detects both!
                 </p>
 
-                <div className="has-margin-top-20" />
-
-                <div className="tile is-child notification is-info">
+                <div className="has-margin-top-20 has-margin-left-20">
+                  <h3 className="subtitle is-sixze-5">IPv6</h3>
                   <div className="content">
-                    <h3 className="title">IPv6</h3>
-                    <div className="content">
-                      IPv6 is on the form{" "}
-                      <i>hexval:hexval:hexval:hexval::hexval:hexval</i>. For
-                      example
-                      <i>2604:a880:400:d0::4c66:8001</i>
-                      <a
-                        href="https://en.wikipedia.org/wiki/IPv6"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="is-block"
-                      >
-                        Read more about IPv6 on wikipedia
-                      </a>
-                    </div>
+                    IPv6 is on the form{" "}
+                    <i>hexval:hexval:hexval:hexval::hexval:hexval</i>. For
+                    example
+                    <code>2604:a880:400:d0::4c66:8001</code>
+                    <a
+                      href="https://en.wikipedia.org/wiki/IPv6"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="is-block"
+                    >
+                      Read more about IPv6 on wikipedia
+                    </a>
                   </div>
                 </div>
 
-                <div className="tile is-parent">
-                  <div className="tile is-child notification is-info">
-                    <div className="content">
-                      <h3 className="title">IPv4</h3>
-                      <div className="content">
-                        IPv4 is on the form <i>number.number.number.number</i>.
-                        For example <i>8.8.8.8</i>
-                        <a
-                          href="https://en.wikipedia.org/wiki/IPv4"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          className="is-block"
-                        >
-                          Read more about IPv4 on wikipedia
-                        </a>
-                      </div>
-                    </div>
+                <div className="has-margin-top-20 has-margin-left-20">
+                  <h3 className="subtitle is-size-5">IPv4</h3>
+                  <div className="content">
+                    IPv4 is on the form <i>number.number.number.number</i>. For
+                    example <code>8.8.8.8</code>
+                    <a
+                      href="https://en.wikipedia.org/wiki/IPv4"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="is-block"
+                    >
+                      Read more about IPv4 on wikipedia
+                    </a>
                   </div>
                 </div>
-                <p>
+                <p className="has-margin-top-20">
                   <a
                     href="https://en.wikipedia.org/wiki/IP_address"
                     rel="noopener noreferrer"
@@ -131,6 +131,7 @@ export default () => {
                   </a>
                 </p>
               </div>
+              <div className="column" />
             </div>
           </div>
         </section>
