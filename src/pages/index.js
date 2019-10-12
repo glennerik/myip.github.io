@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ShowIP from "../components/ShowIP/"
+import ShowMetric from "../components/ShowMetric/"
 import ReactGA from "../components/ReactGA"
 
 const IndexPage = () => {
@@ -18,7 +18,17 @@ const IndexPage = () => {
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">Your IP address</h1>
-              <ShowIP />
+              <ShowMetric
+                label="IPv4"
+                endpointUri="https://ipv4.myip.info"
+                metricName="IPv4 Address"
+              />
+              <div className="has-margin-top-50" />
+              <ShowMetric
+                label="IPv6"
+                endpointUri="https://ipv6.myip.info"
+                metricName="IPv6 Address"
+              />
             </div>
           </div>
         </section>
