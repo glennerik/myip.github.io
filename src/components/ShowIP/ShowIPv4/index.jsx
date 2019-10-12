@@ -2,6 +2,7 @@ import React, { useReducer, useEffect } from "react"
 import axios from "axios"
 import reducer, { defaultState } from "./reducer"
 import Swal from "sweetalert2"
+import ctc from "copy-to-clipboard"
 
 const Toast = Swal.mixin({
   toast: true,
@@ -10,18 +11,9 @@ const Toast = Swal.mixin({
   timer: 3000,
 })
 
-const copyIpv4 = () => {
+const copy = text => {
   try {
-    const copyText = document.getElementById("copyIpv4")
-    copyText.select()
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy")
-    console.log("copied", copyText.value)
-    if (window.getSelection) {
-      window.getSelection().removeAllRanges()
-    } else if (document.selection) {
-      document.selection.empty()
-    }
+    ctc(text)
     Toast.fire({
       type: "success",
       title: "Copied",
@@ -79,14 +71,14 @@ const IPv4 = ({ className }) => {
 
   return (
     <>
-      <input
-        id="copyIpv4"
-        value={state.ipv4}
-        readOnly
-        onClick={copyIpv4}
-        className={`${className} has-text-centered has-cursor-pointer is-borderless`}
+      <code
+        onClick={() => copy(state.ipv4)}
+        className={`${className} has-text-centered  is-borderless`}
         title="Click to copy"
-      />
+        style={{ cursor: "copy" }}
+      >
+        {state.ipv4}
+      </code>
       <p className="help">click to copy</p>
     </>
   )
