@@ -1,8 +1,12 @@
 - About page needs info about userAgent and hostname and the refresh button
-- Privacy page
-- Contact page
+- Improve privacy page layout
+- Make a Contact page
+
 - dev.myip.info preview netlify version
 - Show IP position (link to iplocation)
+
 - make nginx.myip.conf
+
   - add nginx as a netlify service?
+
 - iplocation.info branch => really a PWA

@@ -4,9 +4,6 @@ import { useLocalStorageReducer } from "react-storage-hooks"
 import reducer, { defaultState } from "./reducer"
 import refreshIntervals from "./refreshIntervals"
 
-// Only spinning / not-spinning icon (with number inside or beside) instead of "Refresh" text (on dropdown)
-// title should be "Refreshing 👍" "NOT Refreshing ⚠️"
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 export default () => {
@@ -24,7 +21,7 @@ export default () => {
 }
 
 const MetaHeader = ({ state }) =>
-  state.refreshInterval === -1 || state.ddOpen ? null : (
+  state.refreshInterval === 0 || state.ddOpen ? null : (
     <Helmet>
       <meta
         httpEquiv="refresh"
@@ -41,7 +38,7 @@ const DropDown = props => {
       <div className="dropdown-trigger">
         <button
           className={`button ${
-            props.state.refreshInterval === -1 ? "is-warning" : "is-dark"
+            props.state.refreshInterval === 0 ? "is-danger" : "is-dark"
           }`}
           onClick={() => props.dispatch({ type: "TOGGLE_OPEN" })}
           aria-haspopup="true"
@@ -96,12 +93,25 @@ const DropDownItems = ({ state, dispatch }) => (
     <hr className="dropdown-divider" />
     <a
       href=""
-      className={`dropdown-item ${
-        -1 === state.refreshInterval ? "is-active" : ""
-      }`}
-      onClick={() => dispatch({ type: "SET_REFRESH_INTERVAL", payload: -1 })}
+      className={`dropdown-item ${!state.refreshInterval ? "is-active" : ""}`}
+      onClick={() => dispatch({ type: "SET_REFRESH_INTERVAL", payload: 0 })}
     >
-      {state.refreshInterval === -1 ? "Not" : "Stop"} refreshing
+      {!state.refreshInterval ? (
+        <>
+          Not refreshing
+          <i className="fas fa-exclamation-triangle has-margin-left-10" />
+        </>
+      ) : (
+        "Stop refreshing"
+      )}
+    </a>
+    <hr className="dropdown-divider" />
+    <a
+      href=""
+      className="dropdown-item"
+      onClick={() => window.location.reload()}
+    >
+      Refresh NOW
     </a>
   </>
 )
