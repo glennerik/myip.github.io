@@ -16,7 +16,7 @@ export default () => {
       />
       <Layout>
         <SEO title="What is my Hostname & ISP?" />
-        <section className="hero is-fullheight-with-navbar is-light is-bold">
+        <section className="hero is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">Your Internet Connection Details</h1>

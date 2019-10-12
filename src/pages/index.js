@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Helmet link={[{ rel: "canonical", href: "https://www.myip.info" }]} />
       <Layout>
         <SEO title="What is my IP address?" />
-        <section className="hero is-fullheight-with-navbar is-light is-bold">
+        <section className="hero is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">Your IP address</h1>
