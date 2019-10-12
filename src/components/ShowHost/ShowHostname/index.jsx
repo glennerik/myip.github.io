@@ -41,7 +41,7 @@ const ShowHostname = ({ className }) => {
   useEffect(() => {
     if (!state.hostname) {
       axios
-        .get("https://hostname.myip.info")
+        .get("https://rdns.myip.info")
         .then(({ data: payload }) => {
           dispatch({ type: "SET_HOSTNAME_VALUE", payload })
         })
