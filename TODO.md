@@ -1,12 +1,13 @@
+- Show IP position (link to iplocation)
 - About page needs info about userAgent and hostname and the refresh button
-- Improve privacy page layout
-- Make a Contact page
+- Make a netlify Contact page
 
 - dev.myip.info preview netlify version
-- Show IP position (link to iplocation)
 
 - make nginx.myip.conf
 
   - add nginx as a netlify service?
 
 - iplocation.info branch => really a PWA
+- use same repo as this (myip.info) just another branch
+- front page should show users location (and a search field working without javascript)

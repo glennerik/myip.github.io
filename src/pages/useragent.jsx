@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ShowUA from "../components/ShowUA"
 import ReactGA from "../components/ReactGA"
 import ShowMetric from "../components/ShowMetric"
 
