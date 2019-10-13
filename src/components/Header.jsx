@@ -43,17 +43,8 @@ const Header = ({ siteTitle }) => {
           className={`navbar-menu ${isActive ? "is-active" : ""}`}
         >
           <div className="navbar-start">
-            <Link to="/" className="navbar-item">
-              My IP
-            </Link>
-            <Link to="/useragent" className="navbar-item">
-              My Browser
-            </Link>
-            <Link to="/hostname" className="navbar-item">
-              My Hostname
-            </Link>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">More</a>
+            <div className="navbar-item has-dropdown is-hoverable has-margin-left-20">
+              <a className="navbar-link">Menu</a>
               <div className="navbar-dropdown">
                 <Link to="/about" className="navbar-item">
                   About
@@ -66,7 +57,7 @@ const Header = ({ siteTitle }) => {
                 </Link>
                 <hr className="navbar-divider" />
                 <Link to="/" className="navbar-item">
-                  Home
+                  What is my IP address?
                 </Link>
               </div>
             </div>
