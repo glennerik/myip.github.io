@@ -17,7 +17,8 @@ const IndexPage = () => {
         <section className="hero is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title">Your IP address</h1>
+              <div className="has-margin-bottom-50">What is my IP address?</div>
+              <h1 className="title">Your IP address is</h1>
               <ShowMetric
                 label="IPv4"
                 endpointUri="https://ipv4.myip.info"
