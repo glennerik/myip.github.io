@@ -52,7 +52,7 @@ const Header = ({ siteTitle }) => {
                 <Link to="/privacy" className="navbar-item">
                   Privacy
                 </Link>
-                <Link to="/contat" className="navbar-item">
+                <Link to="/contact" className="navbar-item">
                   Contact
                 </Link>
                 <hr className="navbar-divider" />
