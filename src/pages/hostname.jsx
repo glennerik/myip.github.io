@@ -22,14 +22,14 @@ export default () => {
               <h1 className="title">Your Internet Connection Details</h1>
               <ShowMetric
                 endpointUri="https://rdns.myip.info"
-                metricName="your Hostname"
-                label="Your Hostname"
+                metricName="Hostname"
+                label="Hostname"
               />
               <div className="has-margin-top-50" />
               <ShowMetric
                 endpointUri="https://ipinfo.io/org"
-                metricName="your Internet Service Provider"
-                label="Your Internet Service Provider"
+                metricName="Internet Service Provider"
+                label="Internet Service Provider"
               />
             </div>
           </div>
