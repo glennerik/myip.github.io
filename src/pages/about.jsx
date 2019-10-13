@@ -18,11 +18,11 @@ export default () => {
         <SEO title="What this site is about" />
         <section className="section">
           <div className="container">
-            <h1 className="title is-size-1 has-text-centered has-margin-bottom-50">
+            <h1 className="title is-size-1 has-text-centered has-margin-top-50">
               What this site is about
             </h1>
 
-            <div className="columns">
+            <div className="columns has-margin-top-100">
               <div className="column" />
               <div className="column">
                 <h2 className="subtitle is-size-3">
@@ -39,7 +39,7 @@ export default () => {
               </div>
             </div>
 
-            <div className="columns">
+            <div className="columns has-margin-top-100">
               <div className="column">
                 <h2 className="subtitle is-size-3">
                   Learn &amp; know what information can be collected about you
@@ -57,7 +57,7 @@ export default () => {
               <div className="column" />
             </div>
 
-            <div className="columns">
+            <div className="columns has-margin-top-100">
               <div className="column" />
               <div className="column">
                 <h2 className="subtitle is-size-3">
@@ -73,7 +73,7 @@ export default () => {
               </div>
             </div>
 
-            <div className="columns">
+            <div className="columns has-margin-top-100">
               <div className="column">
                 <h2 className="subtitle is-size-3">Your IP Address</h2>
                 <p>

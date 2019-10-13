@@ -18,7 +18,7 @@ export default () => {
         <SEO title="Privacy Policy" />
         <section className="section">
           <div className="container">
-            <h1 className="title is-size-1 has-text-centered">
+            <h1 className="title is-size-1 has-text-centered has-margin-top-50">
               Privacy Policy
             </h1>
             <p className="has-margin-bottom-50">
