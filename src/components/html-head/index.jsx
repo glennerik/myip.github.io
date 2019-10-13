@@ -15,9 +15,9 @@ export default () => (
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         />
       ) : null}
-      <script
-        src="https://kit.fontawesome.com/60966f347e.js"
-        crossorigin="anonymous"
+      <link
+        href="https://file.myfontastic.com/cTTd9UxM3oBZJk4aaidmpb/icons.css"
+        rel="stylesheet"
       />
     </Helmet>
   </>

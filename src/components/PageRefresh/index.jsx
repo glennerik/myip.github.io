@@ -46,9 +46,8 @@ const DropDown = props => {
         >
           <span className="icon">
             <i
-              className={`fas fa-sync-alt ${
-                props.state.ddOpen ? "fa-spin" : ""
-              }`}
+              data-icon="a"
+              className={`icon-refresh ${props.state.ddOpen ? "fa-spin" : ""}`}
             />
           </span>
           <span>
@@ -57,7 +56,7 @@ const DropDown = props => {
               .map(i => i.shortName)}
           </span>
           <span className="icon is-small">
-            <i className="fas fa-angle-down" aria-hidden="true"></i>
+            <i className="icon-caret-down" aria-hidden="true"></i>
           </span>
         </button>
       </div>
@@ -74,7 +73,7 @@ const DropDownItems = ({ state, dispatch }) => (
   <>
     <div className="dropdown-item">
       <p>
-        Set the page <b>refresh</b> interval
+        Page <b>refresh</b> interval
       </p>
     </div>
     <hr className="dropdown-divider" />
@@ -99,7 +98,7 @@ const DropDownItems = ({ state, dispatch }) => (
       {!state.refreshInterval ? (
         <>
           Not refreshing
-          <i className="fas fa-exclamation-triangle has-margin-left-10" />
+          <i className="icon-exclamation-triangle has-margin-left-10" />
         </>
       ) : (
         "Stop refreshing"
