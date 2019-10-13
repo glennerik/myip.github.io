@@ -75,14 +75,38 @@ const Metric = props => {
 
   return (
     <>
-      <code
-        onClick={() => copy(state.metricValue)}
-        className={`${metricClassStyle} has-text-centered  is-borderless`}
-        title="Click to copy"
-        style={{ cursor: "copy" }}
-      >
-        {state.metricValue}
-      </code>
+      <div className="field has-addons has-addons-centered">
+        <p className="control ">
+          <a
+            href="https://www.iplocation.info"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${metricClassStyle} button`}
+            title="See the IP location"
+          >
+            <i className="icon-map-pin-streamline" />
+          </a>
+        </p>
+        <p className="control ">
+          <code
+            onClick={() => copy(state.metricValue)}
+            className={`${metricClassStyle} input`}
+            title="Click to copy"
+            style={{ cursor: "copy" }}
+          >
+            {state.metricValue}
+          </code>
+        </p>
+        <p className="control ">
+          <button
+            className={`${metricClassStyle} button`}
+            title="Re-detect the IP"
+          >
+            <i className="fas fa-sync-alt" />
+          </button>
+        </p>
+      </div>
+
       <p className="help">click to copy</p>
     </>
   )
