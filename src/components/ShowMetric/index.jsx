@@ -83,6 +83,7 @@ const Metric = props => {
             rel="noopener noreferrer"
             className={`${metricClassStyle} button`}
             title="See the IP location"
+            style={{ textDecoration: "none" }}
           >
             <i className="icon-map-pin-streamline" />
           </a>
@@ -102,7 +103,7 @@ const Metric = props => {
             className={`${metricClassStyle} button`}
             title="Re-detect the IP"
           >
-            <i className="fas fa-sync-alt" />
+            <i className="icon-refresh" />
           </button>
         </p>
       </div>
